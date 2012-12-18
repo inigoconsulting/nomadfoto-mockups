@@ -1,6 +1,6 @@
 Nomadfoto
 =========
-My main repo for Nomadfoto project before it goes to `Inigo <https://github.com/inigoconsulting/nomadfoto-mockups>` main repo.
+My main repo for Nomadfoto project before it goes to `Inigo <https://github.com/inigoconsulting/nomadfoto-mockups>`_ main repo.
 
 License
 =======
