@@ -1,0 +1,93 @@
+.custom {
+    padding: 10px;
+    position: relative;
+    list-style: none;
+    margin-left: 10%;
+    margin-right: 10%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+h2 {
+    padding-left: 5px;
+}
+
+#collections {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+}
+
+#collections li {
+    position: relative;
+    float: left;
+    padding: 5px;
+    width: 100px;
+    height: 100px;
+}
+
+#collections li a {
+    display: block;
+    text-align: center;
+}
+
+#collections li a img {
+   width: 50px;
+   height: 50px;
+}
+
+div.alert {
+    float: left;
+    padding: 10px;
+    margin: 3px;
+}
+
+button.admin {
+    margin: 5px;
+}
+
+.folder {
+    background-color: white;
+    display: inline-block;
+    position: static;
+    list-style: none;
+    margin-left: 10%;
+    margin-right: 10%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+#folder {
+    list-style: none;
+    margin: 0;
+    padding: 5px;
+}
+
+#folder li {
+    padding: 5px;
+    float: left;
+    width: 100px;
+    height: 100px;
+}
+
+#folder li a {
+    display: block;
+    float: left;
+    text-align: center;
+}
+
+#folder li a img {
+   width: 50px;
+   height: 50px;
+}
+
+.collectionContainer {
+    min-height: 70px;
+}
+
+.dropzone {
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
