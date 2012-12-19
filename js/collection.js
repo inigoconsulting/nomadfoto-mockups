@@ -4,10 +4,8 @@
             var TEMPLATES = {
         
             'basket': $(
-                '<div class="basket"><div class="dropzone well">' +
-                '<span class="drag-placeholder">Drag Photos Here</span>' +
-                '<ul class="basketContainer" id="thumbnails"></ul>' + 
-                '</div><div class="basket-form">' + 
+                '<div class="basket">'+ //<div class="dropzone well">' +
+                '<div class="basket-form">' + 
                 '<div class="form">' +
                 '<div class="control-group">' +
                 '<label class="control-label" for="basket-action">Action</label>' + 
@@ -22,7 +20,7 @@
                 var populate_gallery = function (node, images) {
                 var gallerylen = 0;
                 $.each(images, function (idx, image) {
-                    node.append('<div class="item"><a href="' + image.url + '" class="boxeffect"><img src="' + image.url + '" /></a></div>');
+                    node.append('<div class="item"><a href="#" id="boxeffect"><img src="' + image.url + '" /></a></div>');
                 })
             }
             $(document).ready(function() {
@@ -59,7 +57,5 @@
                     });
                 }
             });
-                //$(".boxeffect").:wq
-                // $('.thumbnails div').draggable();
             });
         })(jQuery);

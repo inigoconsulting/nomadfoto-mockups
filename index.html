@@ -8,7 +8,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
+        <title>Nomadfoto Management Console</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -93,12 +93,12 @@
                     </fieldset>
                     <form class="form">
                         <div class="control-group">
-                                <input type="text" id="start-date" placeholder="Job Start Date">
-                                <input type="text" id="end-date" placeholder="Job End Date">
-                                <div class="controls">
-                                    <button type="submit" class="btn">Search</button>
-                                </div>
+                            <input type="text" id="start-date" placeholder="Job Start Date">
+                            <input type="text" id="end-date" placeholder="Job End Date">
+                            <div class="controls">
+                                <button type="submit" class="btn">Search</button>
                             </div>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -109,6 +109,11 @@
                         <h3>Job Orders</h3>
                     </legend>
                 </fieldset>
+                <div class="alert alert-block">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <h4>Note!</h4>
+                        Click on each picture in the slideshow to add them to job order list here.
+                </div>
                 <div id="baskets-container">
                     <!-- make more of it from javascript
                     <div class="basket-form">
