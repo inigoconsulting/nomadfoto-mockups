@@ -8,7 +8,7 @@
             '<span class="drag-placeholder">Drag Photos Here</span>' +
             '<ul class="basketContainer" id="thumbnails"></ul>' + 
             '</div><div class="basket-form">' + 
-            '<div class="form-horizontal">' +
+            '<div class="form">' +
             '<div class="control-group">' +
             '<label class="control-label" for="basket-action">Action</label>' + 
             '<div class="controls">' + 
