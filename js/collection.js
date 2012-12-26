@@ -2,8 +2,8 @@
     // function to append to a certain node in html
     populate_gallery = function (node, images) {
         $.each(images, function (idx, image) {
-            node.append('<li style="display: block;"><div><img src="' + image.url + '" /></div></li>');
-            //node.append('<div class="item"><a href="#" id="boxeffect"><img src="' + image.url + '" /></a></div>');
+            //node.append('<li style="display: block;"><div><img src="' + image.url + '" /></div></li>');
+            node.append('<div class="item"><a href="#" id="boxeffect"><img src="' + image.url + '" /></a></div>');
         });
     };
     // function to GetForms.
