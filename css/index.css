@@ -1,11 +1,31 @@
-#joborder {
-    float: right;
+/* <----- Begin impress.js Photo Slideshow css -----> */
+.thumbnails {
+    overflow: hidden;
+    display: table;
 }
 
-#myCarousel {
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-bottom: 5%;
+#items {
+    width: 100%;
+    display: table-cell;
+}
+/* <----- End -----> */
+
+.sidepull {
+    text-align: middle;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.sliders {
+    font-size: 100px;
+}
+
+.btn-link:hover {
+    text-decoration: none;
+}
+
+#joborder {
+    float: right;
 }
 
 .basket {
@@ -20,4 +40,8 @@
 
 #footer {
     background-color: whiteSmoke;
+}
+
+.slider:hover {
+    text-decoration: none;
 }
