@@ -1,16 +1,23 @@
             (function ($) {
                 var populate_jobs = function (node, jobs) {
-                var gallerylen = 0;
                 $.each(jobs, function (idx, job) {
-                    node.append('<li id="' + job.status + '" class="alert alert-' + job.status + '"><a href="' + job.url + '">' + job.title + '</a><br />Client Name: ' + job.client + '</li>');
+                    node.append('<li id="' + job.status + '" class="alert alert-' + job.status + '"><a href="' + job.url + '">' + job.title + '</a><br />Client Name: ' + job.client + '<br />Job Ordered Date: ' + job.start + '<br />Job End Date: ' + job.end + '</li>');
                 })
             }
-                $(document).ready(function () {
-                    $.getJSON('json/jobs.json', {}, function (data) {
-                        populate_jobs($('#jobsqueue'), data)
-                        $('#jobsqueue').sortable().disableSelection();
+                var jobdone = function() {
+                    $.getJSON('json/jobsuccess.json', {}, function (data) {
+                        populate_jobs($('#jobdone'), data)
                     });
-                    $('#jobdone').toggle(function(event) {
+                }
+                var jobpend = function() {
+                    $.getJSON('json/joberror.json', {}, function (data) {
+                        populate_jobs($('#jobpend'), data)
+                    });
+                }
+                $(document).ready(function () {
+                    jobdone();
+                    jobpend();
+                    /* $('#jobdone').toggle(function(event) {
                             $("li[id*='success']").each(function () {
                                 $(this).hide('slow');
                             });
@@ -27,7 +34,7 @@
                                 $("li[id*='error']").each(function () {
                                     $(this).show('slow');
                                 });
-                        });
+                        });*/
                     });
             })(jQuery);
 
