@@ -35,7 +35,7 @@
             GetForms();
             ShowForms();
             $.getJSON('json/images.json', {}, function (data) {
-                populate_gallery($('.thumbnails'), data)
+                populate_gallery($('.thumbnails'), data);
             });
         });
     }
