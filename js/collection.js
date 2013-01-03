@@ -1,19 +1,20 @@
 (function ($) {
     // function to append to a certain node in html
-    populate_gallery = function (node, images) {
+    
+    function populate_gallery(node, images) {
         $.each(images, function (idx, image) {
             //node.append('<li style="display: block;"><div><img src="' + image.url + '" /></div></li>');
-            node.append('<div class="item"><a href="#" id="boxeffect"><img src="' + image.url + '" /></a></div>');
+            node.append('<div id="items" class="step"><a href="#" id="boxeffect"><img src="' + image.url + '" /></a></div>');
         });
     };
     // function to GetForms.
-    GetForms = function () {
+    function GetForms(jobs) {
         $.get('json/' + $('.basket-action').val() + 'form.html', function (data) {
             $('.basket-options-form').html(data);
         });
     };
     // function to ShowForms.
-    ShowForms = function () {
+    function ShowForms() {
         $('.basket-action').change(function (ev) {
             var action = $(ev.target).val();
             $.get('json/' + action + 'form.html', function (data) {
@@ -21,33 +22,34 @@
             });
         });
     }
-    var jobs = function () {
-                var count = 0;
-                $.get('json/jobsection.html', function (data) {
-                    var startsec = '<section class="slide" id="jobs-'+count+'">\n';
-                    var endsec = '</section>\n';
-                    $('.JobSection').append(startsec + data + endsec);
-                    GetForms();
-                    ShowForms();
-                    $.getJSON('json/images.json', {}, function (data) {
-                          populate_gallery($('.thumbnails'), data)
-                          //$('div.item:first').addClass('active');
-                    });
-                $('#joborder').click(function() {
-                    jobs();
-                count = count + 1;
-                });
-              });
-            }
+
+    function ShowMain(count) {
+        $.get('json/jobsection.html', function (data) {
+            var jobs = data;
+            $('.JobSection').append(jobs);
+            $('.slide').attr('id', 'jobs-' + count);
+            count += 1;
+            $('#joborder').click(function() {
+                ShowMain(count);
+            });
+            GetForms();
+            ShowForms();
+            $.getJSON('json/images.json', {}, function (data) {
+                populate_gallery($('.thumbnails'), data)
+            });
+        });
+    }
      // on document ready load the functions
      $(document).ready(function() {
-            jobs();
-            var mySlider = new Swipe(document.getElementById('slider'));
-            $('#prev').click(function () {
-                mySlider.prev();
-            });
-            $('#next').click(function () {
-                mySlider.next();
-            });
+        var count = 0;
+        ShowMain(count);
+        $('#prev').click(function (e) {
+                impress().prev();
+                e.preventDefault();
+        });
+        $('#next').click(function (e) {
+                impress().next();
+                e.preventDefault();
+        });
      });
 })(jQuery);
