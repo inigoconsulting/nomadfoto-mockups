@@ -12,7 +12,7 @@
         $.get('json/' + $('.basket-action').val() + 'form.html', function (data) {
             $('.basket-options-form').html(data);
         });
-    };
+    }
     // function to ShowForms.
     function ShowForms() {
         $('.basket-action').change(function (ev) {
