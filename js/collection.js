@@ -6,7 +6,7 @@
             //node.append('<li style="display: block;"><div><img src="' + image.url + '" /></div></li>');
             node.append('<div id="items" class="step"><a href="#" id="boxeffect"><img src="' + image.url + '" /></a></div>');
         });
-    };
+    }
     // function to GetForms.
     function GetForms(jobs) {
         $.get('json/' + $('.basket-action').val() + 'form.html', function (data) {
