@@ -4,7 +4,7 @@
     function populate_gallery(node, images) {
         $.each(images, function (idx, image) {
             //node.append('<li style="display: block;"><div><img src="' + image.url + '" /></div></li>');
-            node.append('<div id="items" class="step"><a href="#" id="boxeffect"><img src="' + image.url + '" /></a></div>');
+            node.append('<div class="carousel-item"><div><a href="#" id="boxeffect"><img src="' + image.url + '" /></a></div></div>');
         });
     }
     // function to GetForms.
@@ -35,12 +35,13 @@
             GetForms();
             ShowForms();
             $.getJSON('json/images.json', {}, function (data) {
-                populate_gallery($('.thumbnails'), data);
+                populate_gallery($('.carousel'), data);
             });
         });
     }
      // on document ready load the functions
      $(document).ready(function() {
+        $('body').jKit();
         var count = 0;
         ShowMain(count);
         $('#prev').click(function (e) {
@@ -50,6 +51,10 @@
         $('#next').click(function (e) {
                 impress().next();
                 e.preventDefault();
+        });
+        $('#printorder').click(function (e) {
+            $('#notice').removeClass('alert-block').addClass('alert-success');
+            $('#notice').html('<button type="button" class="close" data-dismiss="alert">&times;</button>\n<h4>Success!</h4>\nYour job order has been submitted successfully!\n');
         });
      });
 })(jQuery);
