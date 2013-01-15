@@ -1,8 +1,8 @@
 <section class="slide">
-    <div class="sidepull pull-left span1">
+    <!-- <div class="sidepull pull-left span1">
         <h4>Prev Order</h4>
             <button id="prevSlide" class="btn btn-link"><i class="icon-chevron-left icon-3x"></i></button>
-    </div>
+        </div> -->
     <div class="span6">
         <div id="photoslide">
             <fieldset>
@@ -10,12 +10,12 @@
                     <h3>Your photo collection</h3>
                 </legend>
             </fieldset>
-                <div id="impress" class="thumbnails">
-                </div>
-            <div>
-                <button class="btn btn-link pull-left" id="prev"><i class="icon-chevron-left icon-2x"></i></button>
-                <button class="btn btn-link pull-right" id="next"><i class="icon-chevron-right icon-2x"></i></button>
+            <div class="carousel" data-jkit="[carousel]">
             </div>
+            <!-- <div>
+                <button class="btn btn-link pull-left jkit-carousel-prev" id="prev"><i class="icon-chevron-left icon-2x"></i></button>
+                <button class="btn btn-link pull-right jkit-carousel-next" id="next"><i class="icon-chevron-right icon-2x"></i></button>
+            </div>-->
         </div>
         <div class="clearfix"></div>
         <div id="search">
@@ -35,14 +35,14 @@
             </form>
         </div>
     </div>
-    <div class="span4">
+    <div class="span6">
         <fieldset>
             <legend>
                 <button id="joborder" class="btn btn-primary">Add Job</button>
                 <h3>Job Orders</h3>
             </legend>
         </fieldset>
-        <div class="alert alert-block">
+        <div id="notice" class="alert alert-block">
             <button type="button" class="close" data-dismiss="alert">&times;</button>
             <h4>Note!</h4>
             Click on each picture in the slideshow to add them to job order list here.
@@ -67,8 +67,8 @@
             </div>
         </div>
     </div>
-    <div class="sidepull pull-right span1">
+    <!-- <div class="sidepull pull-right span1">
         <h4>Next Order</h4>
         <button id="nextSlide" class="btn btn-link"><i class="icon-chevron-right icon-3x"></i></button>
-    </div>
+    </div> -->
 </section>
