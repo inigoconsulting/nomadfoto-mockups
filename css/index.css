@@ -1,11 +1,14 @@
+section {
+    padding-top: 10px;
+}
 /* <----- Begin impress.js Photo Slideshow css -----> */
-.thumbnails {
+.carousel {
     overflow: hidden;
     display: table;
+    width: 100%;
 }
 
-#items {
-    width: 100%;
+.carousel-item {
     display: table-cell;
 }
 /* <----- End -----> */
