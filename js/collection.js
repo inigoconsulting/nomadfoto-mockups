@@ -23,39 +23,14 @@
         });
     }
 
-    function ShowMain(count) {
+    function ShowMain() {
         $.get('json/jobsection.html', function (data) {
             var jobs = data;
-            $('.JobSection').append(jobs);
-            $('.slide').attr('id', 'jobs-' + count);
-            count += 1;
-            $('#joborder').click(function() {
-                ShowMain(count);
-            });
-            GetForms();
-            ShowForms();
-            $.getJSON('json/images.json', {}, function (data) {
-                populate_gallery($('.carousel'), data);
-            });
+            $('.orderbaskets').append(jobs);
         });
     }
      // on document ready load the functions
      $(document).ready(function() {
-        //extra stuff from old ver
-        /* var count = 0;
-        ShowMain(count);
-        $('#prev').click(function (e) {
-                impress().prev();
-                e.preventDefault();
-        });
-        $('#next').click(function (e) {
-                impress().next();
-                e.preventDefault();
-        });
-        $('#printorder').click(function (e) {
-            $('#notice').removeClass('alert-block').addClass('alert-success');
-            $('#notice').html('<button type="button" class="close" data-dismiss="alert">&times;</button>\n<h4>Success!</h4>\nYour job order has been submitted successfully!\n');
-        }); */
         GetForms();
         ShowForms();
         $('.thumbnails li').draggable();
@@ -64,6 +39,9 @@
                 $(this).find('.placeholder').remove;
                 $( '<li></li>').text( ui.draggable.text() ).appendTo( this );
             }
+        });
+        $('#joborder').click(function() {
+            ShowMain();
         });
      });
 })(jQuery);

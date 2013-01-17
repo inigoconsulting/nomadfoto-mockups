@@ -1,64 +1,24 @@
-<section class="slide">
-    <!-- <div class="sidepull pull-left span1">
-        <h4>Prev Order</h4>
-            <button id="prevSlide" class="btn btn-link"><i class="icon-chevron-left icon-3x"></i></button>
-        </div> -->
+<div class="clearfix">
     <div class="span6">
-        <div id="photoslide">
-            <fieldset>
-                <legend>
-                    <h3>Your photo collection</h3>
-                </legend>
-            </fieldset>
-            <div class="carousel" data-jkit="[carousel]">
-            </div>
-            <!-- <div>
-                <button class="btn btn-link pull-left jkit-carousel-prev" id="prev"><i class="icon-chevron-left icon-2x"></i></button>
-                <button class="btn btn-link pull-right jkit-carousel-next" id="next"><i class="icon-chevron-right icon-2x"></i></button>
-            </div>-->
-        </div>
-        <div class="clearfix"></div>
-        <div id="search">
-            <fieldset>
-                <legend>
-                    <h3>Photo Search Options</h3>
-                </legend>
-            </fieldset>
-            <form class="form">
-                <div class="control-group">
-                    <input type="text" id="start-date" placeholder="Job Start Date">
-                    <input type="text" id="end-date" placeholder="Job End Date">
-                    <div class="controls">
-                        <button type="submit" class="btn">Search</button>
-                    </div>
-                </div>
-            </form>
+        <div id="dropzone" class="well">
+            <ul class="droppable">
+                <li class="placeholder">Drop your pictures here!</li>
+            </ul>
         </div>
     </div>
-    <div class="span6">
-        <fieldset>
-            <legend>
-                <button id="joborder" class="btn btn-primary">Add Job</button>
-                <h3>Job Orders</h3>
-            </legend>
-        </fieldset>
-        <div id="notice" class="alert alert-block">
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
-            <h4>Note!</h4>
-            Click on each picture in the slideshow to add them to job order list here.
-        </div>
-        <div id="baskets-container">
+    <div class="span5">
+        <div id="baskets-container" class="0">
             <div class="basket">
                 <div class="basket-form">
                     <div class="form">
                         <div class="control-group">
                             <label class="control-label" for="basket-action">Action</label>
-                                <div class="controls">
-                                    <select class="basket-action">
-                                        <option value="print">Print</option>
-                                        <option value="edit">Edit</option>
-                                    </select>
-                                </div>
+                            <div class="controls">
+                                <select class="basket-action">
+                                    <option value="print">Print</option>
+                                    <option value="edit">Edit</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                     <div class="basket-options-form">
@@ -67,8 +27,4 @@
             </div>
         </div>
     </div>
-    <!-- <div class="sidepull pull-right span1">
-        <h4>Next Order</h4>
-        <button id="nextSlide" class="btn btn-link"><i class="icon-chevron-right icon-3x"></i></button>
-    </div> -->
-</section>
+</div>
