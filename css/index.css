@@ -1,50 +1,25 @@
-section {
-    padding-top: 10px;
-}
-/* <----- Begin impress.js Photo Slideshow css -----> */
-.carousel {
-    overflow: hidden;
-    display: table;
-    width: 100%;
+#dragzone img {
+    height: 50px;
 }
 
-.carousel-item {
-    display: table-cell;
-}
-/* <----- End -----> */
-
-.sidepull {
-    text-align: middle;
-    margin-top: 10%;
-    margin-bottom: 10%;
+.thumbnails{
+    list-style: none;
 }
 
-.sliders {
-    font-size: 100px;
+#dropzone {
+    height: 200px;
 }
 
-.btn-link:hover {
-    text-decoration: none;
+#dropzone img {
+    height: 50px;
 }
 
-#joborder {
-    float: right;
+.droppable {
+    list-style: none;
 }
 
-.basket {
+#baskets-container {
     padding: 5px;
-    border: 3px solid #DBD4D4;
-    border-radius: 10px;
-}
-
-.control-group {
-    padding: 5px;
-}
-
-#footer {
-    background-color: whiteSmoke;
-}
-
-.slider:hover {
-    text-decoration: none;
+    border: 2px #e3e3e3 solid;
+    border-radius: 5px;
 }
