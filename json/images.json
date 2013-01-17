@@ -1,0 +1,13 @@
+[{
+    "id": "img1",
+    "title": "Image One",
+    "url": "gallery/img1.jpg"
+}, {
+    "id": "img2",
+    "title": "Image Two",
+    "url": "gallery/img2.jpg"
+}, {
+    "id": "img3",
+    "title": "Image Three",
+    "url": "gallery/img3.jpg"
+}]

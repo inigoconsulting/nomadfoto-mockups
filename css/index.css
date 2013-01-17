@@ -1,0 +1,25 @@
+#dragzone img {
+    height: 50px;
+}
+
+.thumbnails{
+    list-style: none;
+}
+
+#dropzone {
+    height: 200px;
+}
+
+#dropzone img {
+    height: 50px;
+}
+
+.droppable {
+    list-style: none;
+}
+
+#baskets-container {
+    padding: 5px;
+    border: 2px #e3e3e3 solid;
+    border-radius: 5px;
+}
