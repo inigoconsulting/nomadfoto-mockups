@@ -41,8 +41,8 @@
     }
      // on document ready load the functions
      $(document).ready(function() {
-        $('body').jKit();
-        var count = 0;
+        //extra stuff from old ver
+        /* var count = 0;
         ShowMain(count);
         $('#prev').click(function (e) {
                 impress().prev();
@@ -55,6 +55,15 @@
         $('#printorder').click(function (e) {
             $('#notice').removeClass('alert-block').addClass('alert-success');
             $('#notice').html('<button type="button" class="close" data-dismiss="alert">&times;</button>\n<h4>Success!</h4>\nYour job order has been submitted successfully!\n');
+        }); */
+        GetForms();
+        ShowForms();
+        $('.thumbnails li').draggable();
+        $('.droppable li', '#dropzone').droppable({
+            drop: function(event, ui) {
+                $(this).find('.placeholder').remove;
+                $( '<li></li>').text( ui.draggable.text() ).appendTo( this );
+            }
         });
      });
 })(jQuery);
