@@ -1,17 +1,16 @@
-#dragzone img {
+.thumbnail img {
     height: 50px;
 }
 
-.thumbnails{
+.thumbnails {
     list-style: none;
 }
 
-#dropzone {
+.droppable {
     margin-top: 10px;
-    height: 200px;
 }
 
-#dropzone img {
+.droppable img {
     height: 50px;
 }
 
