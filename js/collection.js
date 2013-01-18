@@ -4,9 +4,10 @@
     function populate_gallery(node, images) {
         $.each(images, function (idx, image) {
             //node.append('<li style="display: block;"><div><img src="' + image.url + '" /></div></li>');
-            node.append('<div class="carousel-item"><div><a href="#" id="boxeffect"><img src="' + image.url + '" /></a></div></div>');
+            node.append('<li><a href="#" class="thumbnail"><img src="' + image.url + '" /></a></li>');
         });
     }
+
     // function to GetForms.
     function GetForms(jobs) {
         $.get('json/' + $('.basket-action').val() + 'form.html', function (data) {
@@ -33,17 +34,20 @@
      $(document).ready(function() {
         GetForms();
         ShowForms();
-        $('.thumbnails li').draggable({ 
-            helper: "clone",
-            revert: "invalid"
-        });
-        $('.droppable').droppable({
-            activeClass: "ui-state-default",
-            hoverClass: "ui-state-hover",
-            drop: function(event, ui) {
-                $( this ).find( ".placeholder" ).remove();
-                $( this ).append('<li>' + ui.draggable.html() + '</li>');
-            }
+        $.getJSON('json/images.json', {}, function (data) {
+            populate_gallery($('#dragzone .thumbnails'), data)
+            $('.thumbnails li').draggable({ 
+                helper: "clone",
+                revert: "invalid"
+            });
+            $('.droppable').droppable({
+                activeClass: "ui-state-default",
+                hoverClass: "ui-state-hover",
+                drop: function(event, ui) {
+                    $( this ).find( ".placeholder" ).remove();
+                    $( this ).append('<li>' + ui.draggable.html() + '</li>');
+                }
+            });
         });
         $('#joborder').click(function() {
             ShowMain();
