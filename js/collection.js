@@ -33,11 +33,16 @@
      $(document).ready(function() {
         GetForms();
         ShowForms();
-        $('.thumbnails li').draggable();
-        $('.droppable li', '#dropzone').droppable({
+        $('.thumbnails li').draggable({ 
+            helper: "clone",
+            revert: "invalid"
+        });
+        $('.droppable').droppable({
+            activeClass: "ui-state-default",
+            hoverClass: "ui-state-hover",
             drop: function(event, ui) {
-                $(this).find('.placeholder').remove;
-                $( '<li></li>').text( ui.draggable.text() ).appendTo( this );
+                $( this ).find( ".placeholder" ).remove();
+                $( this ).append('<li>' + ui.draggable.html() + '</li>');
             }
         });
         $('#joborder').click(function() {
